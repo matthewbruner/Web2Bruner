@@ -1,3 +1,33 @@
 /* =============
     Header
 ============= */
+
+header {
+    display: grid;
+
+    @include sm {
+        grid-template-areas: ". header . ";
+        grid-template-columns: auto 576px auto;
+    }
+
+    >div {
+        @include sm {
+            grid-area: header;
+        }
+    }
+
+    section {
+        padding: 15px;
+
+        img{
+            width: 96px;
+            @include md{
+                width: 123px;
+            }
+            
+            @include lg{
+                width: 150px;
+            }
+        }
+    }
+}
